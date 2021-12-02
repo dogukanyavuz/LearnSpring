@@ -14,12 +14,12 @@
         <td>Guest</td>
     </tr>
 
-    <tr th:each="roomReservations: ${roomReservations}">
-        <td th:text="${roomReservations.roomName}">Room Name</td>
-        <td th:text="${roomReservations.roomNumber}">Room Number</td>
-        <td th:text="${roomReservations.lastname}!=null?$roomReservation.lastName} + ', ' + ${roomReservation.firstName} : 'VACANT'">Full Name</td>
+    <tr th:each="item: ${roomReservations}">
+        <td th:text="${item.roomName}">Room Name</td>
+        <td th:text="${item.roomNumber}">Room Number</td>
+        <td th:text="${item.lastName}!=null ? (${item.lastName} + ', ' + ${item.firstName}) : 'VACANT'">Full Name</td>
     </tr>
-
 </table>
 </body>
 </html>
+

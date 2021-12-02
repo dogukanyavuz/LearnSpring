@@ -50,6 +50,4 @@ public class ReservationService {
         }
         return roomReservations;
     }
-
-
 }
